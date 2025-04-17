@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Pomodoro</title>
+</head>
+<body>
+<div>
+    <h4>Welcome to Pomodoro</h4>
+    <div id="message_section">
+        <span id="error_message_display"></span>
+        <span id="warning_message_display"></span>
+        <span id="success_message_display"></span>
+    </div>
+    <div>
+        <div id="pomodoro_selector_section">
+            Please select a timer type
+            <div>
+                <!-- TODO To work on  -->
+                <!-- <div>
+                  <select name="timeTypeDirect" id="time_type_direct_id">
+                    <option value="direct-pomodoro">Direct pomodoro</option>
+                    <option value="focus-cycle">Focus cycle</option>
+                  </select>
+                </div> -->
+                <div>
+                    <input
+                            type="radio"
+                            name="focus-type"
+                            value="focus-cycle"
+                            id="focus_cycle_id"
+                    />
+                    <label for="focus_cycle_id">Focus cycle</label>
+                </div>
+                <div>
+                    <input
+                            type="radio"
+                            name="focus-type"
+                            value="direct-pomodoro"
+                            id="direct_pomodoro_id"
+                    />
+                    <label for="direct_pomodoro_id">Direct pomodoro</label>
+                </div>
+                <button id="pom_section_button">Next</button>
+            </div>
+        </div>
+        <div id="focus_cycle_selector_section">
+            Display Focus Cycle Work in progress
+            <!--            <div>-->
+            <!--                <div>-->
+            <!--                    <label for="total_time_id">-->
+            <!--                        Enter total time you want to work on-->
+            <!--                    </label>-->
+            <!--                    <input   name="total-time" id="total_time_id"/>-->
+            <!--                </div>-->
+            <!--                <div>-->
+            <!--                    <label for="brake_per_time_id">-->
+            <!--                        Enter brake time-->
+            <!--                    </label>-->
+            <!--                    <input onChange="handelInputChange()" name="brake-time" id="brake_per_time_id"/>-->
+            <!--                </div>-->
+            <!--                <div>-->
+            <!--                    <label for="total_brake_time_id">-->
+            <!--                        Enter number of brake-->
+            <!--                    </label>-->
+            <!--                    <input name="total-brake-time" id="total_brake_time_id"/>-->
+            <!--                </div>-->
+            <!--                <div>-->
+            <!--                    <button>Start</button>-->
+            <!--                </div>-->
+            <!--            </div>-->
+        </div>
+
+        <!--        Direct pomodoro-->
+        <div id="direct_pomodoro_selector_section">
+            Direct pomodoro
+            <form>
+                <div>
+                    <div>
+                        <label for="total_time_direct_id">
+                            Enter total time you want to work on
+                        </label>
+                        <input
+                                type="number"
+                                min="0"
+                                name="totalTimeDirect"
+                                id="total_time_direct_id"
+                        />
+                    </div>
+                    <div>
+                        <label for="time_type_direct_id">Select time format</label>
+                        <select name="timeTypeDirect" id="time_type_direct_id">
+                            <option value="--">---</option>
+                            <option value="hour">Hour</option>
+                            <option value="minute">Minute</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label for="rest_time_id"> Enter rest time </label>
+                    <input type="number" min="0" name="restTime" id="rest_time_id"/>
+                </div>
+                <div>
+                    <button type="submit" id="start_direct_pomodoro">Start</button>
+                    <button type="reset" id="re_start_direct_pomodoro">Re-start</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <div>Display Timer</div>
+        <div id="display_remaining_time"></div>
+
+        <div id="display_timer_button">
+            <button id="display_timer_pause">Pause</button>
+            <button id="display_timer_play">Play</button>
+            <button id="display_timer_stop">Stop</button>
+        </div>
+    </div>
+</div>
+</body>
+<script src="popup.js"></script>
+</html>
